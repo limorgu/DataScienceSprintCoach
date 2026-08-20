@@ -1,6 +1,6 @@
 # Practice Resources
 
-> Start with the repository [environment guide](../ENVIRONMENT.md) for the VS Code, Codex, and SQLite workflow.
+> For the VS Code and SQLite workflow, start with [SQL Practice Setup](../.agents/skills/data-science-sprint-coach/question-bank/sql/SETUP.md).
 
 These are public, synthetic practice resources. They contain no personal answers, employer material, or progress history.
 

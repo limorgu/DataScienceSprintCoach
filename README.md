@@ -12,7 +12,7 @@ Open this repository in Codex and say:
 Use @data-science-sprint-coach to continue my interview practice. Read the current session state, active schema, and active topic before asking the next question.
 ```
 
-For VS Code, SQLite, CSV resources, and the 9pm private progress workflow, read [ENVIRONMENT.md](ENVIRONMENT.md).
+For the SQL/SQLite setup, open [SQL Practice Setup](.agents/skills/data-science-sprint-coach/question-bank/sql/SETUP.md). For the Python/pandas setup, open [Python and pandas Practice Setup](.agents/skills/data-science-sprint-coach/question-bank/python/SETUP.md).
 
 ## What it covers
 

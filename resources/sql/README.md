@@ -1,6 +1,6 @@
 # users + sessions SQL Practice Kit
 
-> Start with the repository [environment guide](../../ENVIRONMENT.md) for the VS Code, Codex, and SQLite workflow.
+> For the VS Code and SQLite workflow, start with [SQL Practice Setup](../../.agents/skills/data-science-sprint-coach/question-bank/sql/SETUP.md).
 
 This synthetic dataset supports joins, NULL handling, activation metrics, aggregation grain, windows, ranking, and date transformations.
 
