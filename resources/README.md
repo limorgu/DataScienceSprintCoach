@@ -1,5 +1,7 @@
 # Practice Resources
 
+> Start with the repository [environment guide](../ENVIRONMENT.md) for the VS Code, Codex, and SQLite workflow.
+
 These are public, synthetic practice resources. They contain no personal answers, employer material, or progress history.
 
 ## SQL users + sessions kit

@@ -1,5 +1,7 @@
 # users + sessions SQL Practice Kit
 
+> Start with the repository [environment guide](../../ENVIRONMENT.md) for the VS Code, Codex, and SQLite workflow.
+
 This synthetic dataset supports joins, NULL handling, activation metrics, aggregation grain, windows, ranking, and date transformations.
 
 ## Load it

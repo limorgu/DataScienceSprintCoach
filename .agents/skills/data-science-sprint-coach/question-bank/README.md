@@ -1,5 +1,7 @@
 # Public Question Catalog
 
+> Start with the repository [environment guide](../../../../ENVIRONMENT.md) for the VS Code, Codex, and SQLite workflow.
+
 This folder is owned by the Data Science Sprint Coach. It is a public catalog of reusable questions, organized only by topic.
 
 ## Topics
