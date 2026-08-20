@@ -2,7 +2,7 @@
 
 A stand-alone, continuous-learning coach for data-science interview practice.
 
-It keeps question history, future questions, topic progress, and schema rules separate so every practice session starts at the right point and builds on verified evidence.
+It presents a public catalog of questions by topic. Personal practice history, daily coverage, scores, and next steps remain in a separate private progress folder.
 
 ## Start
 
@@ -23,21 +23,21 @@ Use @data-science-sprint-coach to continue my interview practice. Read the curre
 - case interviews
 - technical communication
 
-Every topic has separate `covered/` and `future/` folders. Completed evidence is never confused with a planned question.
+Every topic has one public `questions.md` catalog. It never shows what an individual has covered, will cover next, or scored.
 
 ## How a session works
 
-1. Read the private checkpoint when available, otherwise the public-safe session state.
+1. Read the private progress checkpoint.
 2. Read only the active topic and active schema.
 3. Ask one durable, numbered question.
 4. Review the attempt, identify the key correction, and offer a retry when useful.
-5. Save the next question and progression signal.
+5. At 9pm, the dedicated progress agent saves the day's result, next question, and progression signal to private progress.
 
 Question numbering never resets during a continued sequence. The coach never borrows a table or column from a historical schema: it uses only the active schema.
 
 ## Public and private data
 
-The tracked question bank contains only genericized questions, synthetic schemas, and public-safe progress evidence. Real daily answers, scores, interview feedback, employer details, and private links belong in the local gitignored `private-practice/` folder.
+The tracked question bank contains only topic-organized reusable questions and synthetic schemas. Real daily answers, scores, interview feedback, employer details, coverage status, and private links belong in the local gitignored `private-progress/` folder.
 
 ## Connection to JobSearchCoach
 
@@ -50,12 +50,11 @@ This coach is independent. It may receive only an interview surface, readiness g
 ├── SKILL.md
 ├── agents/openai.yaml
 └── question-bank/
-    ├── session-state.yaml
     ├── schema-registry.md
-    ├── data-science-sprint-plan.md
     └── {sql,python,ml,statistics,llm,design,case,communication,other}/
-        ├── covered/
-        └── future/
+        └── questions.md
+
+private-progress/  # local only; excluded from Git
 
 tests/training-continuity.md
 ```

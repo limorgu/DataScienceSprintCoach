@@ -1,6 +1,6 @@
 ---
 name: data-science-sprint-coach
-description: Run a continuous, topic-based data-science interview-practice system. Use when a learner wants to practice SQL, Python, ML, statistics, experimentation, LLM, design, case reasoning, or technical communication with durable question numbering, active-schema isolation, covered versus future question banks, retries, and progress evidence. Do not use for job discovery, resumes, applications, or networking.
+description: Run a continuous, topic-based data-science interview-practice system. Use when a learner wants to practice SQL, Python, ML, statistics, experimentation, LLM, design, case reasoning, or technical communication with public topic question catalogs, active-schema isolation, retries, and private progress records. Do not use for job discovery, resumes, applications, or networking.
 ---
 
 # Data Science Sprint Coach
@@ -47,11 +47,11 @@ Do not restart numbering in a continued sequence.
 
 ## Session-state authority
 
-Before generating any question, read the user-approved private checkpoint when it is available; otherwise read `question-bank/session-state.yaml`. Then read the active dataset entry in `question-bank/schema-registry.md`.
+Before generating any question, read `private-progress/sprint-session-state.yaml`. If it is unavailable, ask the user to select a topic and create a private checkpoint before recording progress. Then read the active dataset entry in `question-bank/schema-registry.md`.
 
-Use the `active_topic` in session state to read only that topic's `covered/` and `future/` folders under `question-bank/<topic>/`. Keep each topic's attempted questions and planned questions separate; never treat a planned question as history.
+Use the `active_topic` in private state to read the public `question-bank/<topic>/questions.md` catalog. Keep attempted questions, plans, and scores only in `private-progress/`; never publish them or infer them from the public catalog.
 
-For the current four-week sequence, read `question-bank/data-science-sprint-plan.md` before selecting a new future question. Evidence, retries, and imminent interviews may reorder the plan without changing an already presented question's identifier.
+For the current four-week sequence, read `private-progress/sprint-plan.md` before selecting a question. Evidence, retries, and imminent interviews may reorder that private plan without changing an already presented question's identifier.
 
 The state must contain:
 - last question reached;
@@ -109,18 +109,15 @@ Coached work is never mastery.
 
 Continuity beats novelty.
 
-## Current handoff state
+## Private progress and 9pm agent
 
-At the time this leaf was packaged:
-- last user-confirmed SQL question reached: Q49;
-- next question: Q50;
-- recent sequence emphasized transformations, NULLs, LEFT JOIN behavior when match coverage differs, aggregation grain, derived row-level metrics, date transformations, and aggregate → metric → LAG;
-- the tracker captured Q44–Q48 but omitted Q49;
-- Q49’s exact prompt must be recovered from source history if it is ever archived; do not fabricate it.
+All individual progress belongs in `private-progress/`, including daily coverage, answers, scores, retry status, next question, session state, and sprint plan. It is gitignored and never published.
+
+At 9pm, the dedicated progress agent records the day's practice evidence, updates the private session state and plan, and writes a concise daily progress log. It must not update the public question catalog with a learner's results.
 
 ## Cross-domain roadmap
 
-Keep the question bank organized by topic: `sql`, `python`, `ml`, `statistics`, `llm`, `design`, `case`, `communication`, and `other`. Each topic owns `covered/` for verified attempts and `future/` for planned questions. Add a topic only when it has a real practice need; do not create fictional covered history.
+Keep the public question bank organized by topic: `sql`, `python`, `ml`, `statistics`, `llm`, `design`, `case`, `communication`, and `other`. Each topic owns one `questions.md` catalog. Add a topic only when it has a real practice need; never publish individual progress history.
 
 ### SQL
 Prioritize:
@@ -207,4 +204,4 @@ Always persist:
 - still-weak patterns;
 - continuation instruction.
 
-Write detailed, real-session checkpoints to the local gitignored `private-practice/` area after every session. Keep the tracked `question-bank/session-state.yaml` as a sanitized baseline only; update it only with genericized information that is safe to publish. A next private session must be reconstructable from its private checkpoint alone.
+At 9pm, write detailed real-session checkpoints to the local gitignored `private-progress/` area. A next session must be reconstructable from its private checkpoint alone. Never place individual results, covered status, scores, plans, or next-question state in the public repository.

@@ -1,0 +1,21 @@
+# Python and pandas Question Catalog
+
+- Count values matching a condition.
+- Sum selected values without `sum()`.
+- Find the largest value without `max()`.
+- Combine filtering, counting, and list reconstruction.
+- Build a frequency map with a dictionary.
+- Find the first non-repeating value.
+- Implement group-like aggregation with dictionaries.
+- Calculate a sliding-window sum and maximum.
+- Explain time and space complexity for a solution.
+- Filter DataFrame rows with multiple conditions.
+- Create a calculated column with missing values.
+- Use `groupby().agg()` for several metrics.
+- Merge two DataFrames with incomplete match coverage.
+- Identify unmatched rows after a left merge.
+- Fill or preserve missing values intentionally.
+- Rank within groups.
+- Calculate a previous-row metric within a group.
+- Write a reusable metric function.
+- Debug a grain or duplicate-row error after a merge.

@@ -4,9 +4,9 @@ Run each case in a fresh context with only this skill, relevant question-bank fi
 
 ## 1. Durable continuation
 
-Given `last_question_reached: 49` and `next_question: 50`, ask the agent to continue SQL practice.
+Given a private state with a saved stopping point and next question, ask the agent to continue SQL practice.
 
-Pass only if it reads state and starts at Q50, never Q1.
+Pass only if it reads private progress state and continues from the saved next question, never Q1.
 
 ## 2. Active-schema isolation
 
@@ -52,10 +52,10 @@ Pass only if state is repaired to last Q49 / next Q50 and Q49 remains `prompt_re
 
 Ask for Python, ML, LLM, design, or case practice after SQL practice exists.
 
-Pass only if the agent reads the requested topic's `covered/` and `future/` folders, keeps its question history separate from SQL, and does not call an unattempted future question covered.
+Pass only if the agent reads the requested topic's public `questions.md` catalog, keeps all individual history private, and does not expose whether a question was covered.
 
 ## 9. Public/private practice boundary
 
 Provide a real daily answer, score, employer-specific detail, or interview feedback.
 
-Pass only if the agent records it in the gitignored private practice area and does not add it to the public question bank. A public update is allowed only after explicit approval and full genericization.
+Pass only if the 9pm progress agent records it in the gitignored `private-progress/` area and does not add it to the public question bank. A public update is allowed only after explicit approval and full genericization.
