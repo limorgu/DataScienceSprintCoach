@@ -23,7 +23,8 @@ Start with the [Learning Path](LEARNING_PATH.md), then open one folder in the [T
 - LLM
 - system/design reasoning
 - case interviews
-- technical communication
+- AI safety and evaluation
+- experiment design
 
 Every topic folder contains only `ENVIRONMENT.md` and `QUESTIONS.md`. It never shows what an individual has covered, will cover next, or scored.
 
@@ -54,7 +55,7 @@ This coach is independent. It may receive only an interview surface, readiness g
 ```text
 resources/
 ├── library/
-│   └── {sql,python,ml,statistics,llm,design,case,communication,other}/
+│   └── {sql,python,ml,statistics,llm,design,case,ai-safety-evaluation,experiment-design,other}/
 │       ├── ENVIRONMENT.md
 │       └── QUESTIONS.md
 └── data/

@@ -9,5 +9,6 @@ Use this map to choose one topic. The public library contains only topic metadat
 5. [LLM systems](resources/library/llm/) — retrieval, evaluation, safety, quality, cost, and monitoring.
 6. [Design](resources/library/design/) — product flows, research, accessibility, instrumentation, and trade-offs.
 7. [Cases](resources/library/case/) — structured data-science and product decisions.
-8. [Technical communication](resources/library/communication/) — clear, evidence-based interview communication.
-9. [Other](resources/library/other/) — new public-safe topics that do not fit the core tracks.
+8. [AI safety and evaluation](resources/library/ai-safety-evaluation/) — quality rubrics, human data, thresholds, failure analysis, and safe rollout.
+9. [Experiment design](resources/library/experiment-design/) — hypotheses, assignment, metrics, validity, analysis, and rollout decisions.
+10. [Other](resources/library/other/) — new public-safe topics that do not fit the core tracks.
