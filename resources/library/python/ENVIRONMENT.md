@@ -12,7 +12,7 @@ source .venv/bin/activate
 python -m pip install pandas
 ```
 
-4. Use the public CSV tables in `resources/data/` or connect to one of the matching SQLite databases. Keep joins inside the selected dataset and validate merge grain.
+4. Use the CSV tables in this folder's `datasets/` directory or connect to one of its matching SQLite databases. The generic datasets are `customer-support/`, `streaming-analytics/`, and `ai-quality-safety/`. Keep joins inside the selected dataset and validate merge grain.
 
 **Coverage:** core Python, lists, strings, dictionaries, algorithms, pandas, joins, validation, reshaping, cohorts, rolling metrics, and data quality.
 
