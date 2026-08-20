@@ -1,11 +1,9 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { spawn } from "node:child_process";
-import { SpreadsheetFile, Workbook } from "@oai/artifact-tool";
 
 const root = process.env.SPRINT_RESOURCE_ROOT ?? path.resolve(import.meta.dirname, "..");
 const resourceDir = path.join(root, "resources", "sql");
-const outputDir = path.join(root, "outputs");
 
 const users = [
   ["U001", "2026-01-03", "free", "en", "US", "25-34"],
@@ -74,7 +72,6 @@ const csv = (header, rows) => [header, ...rows].map((row) => row.join(",")).join
 const sqlLiteral = (value) => `'${String(value).replaceAll("'", "''")}'`;
 
 await fs.mkdir(resourceDir, { recursive: true });
-await fs.mkdir(outputDir, { recursive: true });
 await fs.writeFile(path.join(resourceDir, "users.csv"), csv(headers.users, users));
 await fs.writeFile(path.join(resourceDir, "sessions.csv"), csv(headers.sessions, sessions));
 
@@ -100,86 +97,4 @@ await new Promise((resolve, reject) => {
   process.stdin.end(sql);
 });
 
-const wb = Workbook.create();
-const overview = wb.worksheets.add("Start Here");
-const usersSheet = wb.worksheets.add("users");
-const sessionsSheet = wb.worksheets.add("sessions");
-const dictionary = wb.worksheets.add("Data Dictionary");
-
-for (const sheet of [overview, usersSheet, sessionsSheet, dictionary]) sheet.showGridLines = false;
-
-overview.getRange("A1:F1").merge();
-overview.getRange("A1").values = [["SQL Practice Dataset — users + sessions"]];
-overview.getRange("A3:B7").values = [
-  ["Resource", "Use"],
-  ["users.csv / sessions.csv", "Load into the SQL engine of your choice."],
-  ["users_sessions_practice.sql", "Create and populate the SQLite-compatible database."],
-  ["users_sessions_practice.sqlite", "Open directly with SQLite or a database browser."],
-  ["This workbook", "Browse the same synthetic data in Excel."],
-];
-overview.getRange("D3:E6").values = [
-  ["Metric", "Value"],
-  ["Users", "=COUNTA('users'!A2:A21)"],
-  ["Sessions", "=COUNTA('sessions'!A2:A34)"],
-  ["Users with no session", 2],
-];
-overview.getRange("A8:F10").merge();
-overview.getRange("A8").values = [["Practice rule: use only the users and sessions tables for the current SQL exercises. The dataset deliberately includes users with no sessions, varied activation delays, repeated channels, and completed/abandoned sessions."]];
-
-usersSheet.getRange("A1:F21").values = [headers.users, ...users];
-sessionsSheet.getRange("A1:F34").values = [headers.sessions, ...sessions];
-const dictionaryRows = [
-  ["Table", "Column", "Type", "Meaning"],
-  ["users", "user_id", "TEXT", "Stable user identifier"],
-  ["users", "signup_date", "TEXT / yyyy-mm-dd", "Date the user signed up"],
-  ["users", "plan_type", "TEXT", "free, pro, or team"],
-  ["users", "language", "TEXT", "Preferred product language"],
-  ["users", "country", "TEXT", "Country code"],
-  ["users", "age_group", "TEXT", "Synthetic age bracket"],
-  ["sessions", "session_id", "TEXT", "Stable session identifier"],
-  ["sessions", "user_id", "TEXT", "Foreign key to users.user_id"],
-  ["sessions", "session_start", "TEXT / timestamp", "Session start time"],
-  ["sessions", "channel", "TEXT", "web, mobile, or api"],
-  ["sessions", "topic", "TEXT", "onboarding, search, analysis, or export"],
-  ["sessions", "end_status", "TEXT", "completed or abandoned"],
-];
-dictionary.getRange("A1:D13").values = dictionaryRows;
-
-const headerStyle = { fill: "#153E75", font: { bold: true, color: "#FFFFFF" }, horizontalAlignment: "center" };
-overview.getRange("A1:F1").format = { fill: "#153E75", font: { bold: true, color: "#FFFFFF", size: 16 }, horizontalAlignment: "center", verticalAlignment: "center" };
-overview.getRange("A3:B3").format = headerStyle;
-overview.getRange("D3:E3").format = headerStyle;
-overview.getRange("A8:F10").format = { fill: "#EAF2F8", font: { color: "#17365D" }, wrapText: true, verticalAlignment: "center" };
-usersSheet.getRange("A1:F1").format = headerStyle;
-sessionsSheet.getRange("A1:F1").format = headerStyle;
-dictionary.getRange("A1:D1").format = headerStyle;
-for (const sheet of [usersSheet, sessionsSheet, dictionary]) sheet.freezePanes.freezeRows(1);
-usersSheet.getRange("B2:B21").format.numberFormat = "yyyy-mm-dd";
-sessionsSheet.getRange("C2:C34").format.numberFormat = "yyyy-mm-dd hh:mm";
-overview.getRange("E4:E6").format.numberFormat = "#,##0";
-for (const [sheet, range] of [[overview, "A1:F10"], [usersSheet, "A1:F21"], [sessionsSheet, "A1:F34"], [dictionary, "A1:D13"]]) {
-  sheet.getRange(range).format.wrapText = true;
-  sheet.getRange(range).format.autofitColumns();
-}
-overview.getRange("A1:F1").format.rowHeight = 28;
-overview.getRange("A8:F10").format.rowHeight = 35;
-
-const inspection = await wb.inspect({ kind: "table", range: "users!A1:F21", include: "values", tableMaxRows: 25, tableMaxCols: 8 });
-if (!inspection.ndjson.includes("U001") || !inspection.ndjson.includes("U020")) throw new Error("Workbook user data verification failed");
-const errors = await wb.inspect({ kind: "match", searchTerm: "#REF!|#DIV/0!|#VALUE!|#NAME\\?|#N/A", options: { useRegex: true, maxResults: 50 }, summary: "formula error scan" });
-if (errors.ndjson.includes("#REF!") || errors.ndjson.includes("#DIV/0!")) throw new Error("Workbook contains formula errors");
-
-for (const [sheetName, range, filename] of [
-  ["Start Here", "A1:F10", "sql_practice_start_here.png"],
-  ["users", "A1:F21", "sql_practice_users.png"],
-  ["sessions", "A1:F34", "sql_practice_sessions.png"],
-  ["Data Dictionary", "A1:D13", "sql_practice_dictionary.png"],
-]) {
-  const preview = await wb.render({ sheetName, range, scale: 1.2, format: "png" });
-  await fs.writeFile(path.join(outputDir, filename), new Uint8Array(await preview.arrayBuffer()));
-}
-const xlsx = await SpreadsheetFile.exportXlsx(wb);
-const workbookPath = path.join(resourceDir, "users_sessions_practice.xlsx");
-await xlsx.save(workbookPath);
-
-console.log(JSON.stringify({ users: users.length, sessions: sessions.length, resourceDir, workbookPath }));
+console.log(JSON.stringify({ users: users.length, sessions: sessions.length, resourceDir }));

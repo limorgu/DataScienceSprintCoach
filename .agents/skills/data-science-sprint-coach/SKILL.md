@@ -9,7 +9,7 @@ This is a stand-alone continuous-learning coach for data-science interview pract
 
 Use it for the data-science interview sprint: SQL, Python/pandas, statistics, experimentation, LLM, ML/model evaluation, case/design reasoning, technical explanations, and structured interview communication.
 
-Before SQL practice, read `../../../resources/sql/README.md`, the active schema in `question-bank/schema-registry.md`, and the relevant topic's `questions.md`. The SQL practice kit includes public synthetic CSV, SQLite, and Excel resources. Use only the active dataset's approved tables.
+Before SQL practice, read `../../../resources/sql/README.md`, the active schema in `question-bank/schema-registry.md`, and the relevant topic's `questions.md`. The SQL practice kit includes public synthetic CSV and SQLite resources. Use only the active dataset's approved tables.
 
 Keep job discovery, resumes, applications, and networking in the separate [JobSearchCoach repository](https://github.com/limorgu/JobSearchCoach). This repository is the complete interface for training practice.
 

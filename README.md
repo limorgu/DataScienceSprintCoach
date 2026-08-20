@@ -27,7 +27,7 @@ Every topic has one public `questions.md` catalog. It never shows what an indivi
 
 ## Included practice resources
 
-The repository includes a public synthetic [SQL practice kit](resources/sql/README.md): `users.csv`, `sessions.csv`, a SQLite setup script, a ready-to-query SQLite database, and an Excel workbook with the same data and data dictionary. It is designed for the SQL catalog's joins, NULL handling, aggregation, date, ranking, and window-function prompts.
+The repository includes a public synthetic [SQL practice kit](resources/sql/README.md): `users.csv`, `sessions.csv`, a SQLite setup script, and a ready-to-query SQLite database. It is designed for the SQL catalog's joins, NULL handling, aggregation, date, ranking, and window-function prompts.
 
 ## How a session works
 
