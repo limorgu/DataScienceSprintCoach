@@ -1,0 +1,4 @@
+interface:
+  display_name: "Data Science Sprint Coach"
+  short_description: "Run continuous, topic-based interview practice."
+  default_prompt: "Continue my Data Science Sprint. Read my current session state, active schema, and active topic before asking the next numbered question."
