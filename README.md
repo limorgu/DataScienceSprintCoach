@@ -12,9 +12,7 @@ Open this repository in Codex and say:
 Use @data-science-sprint-coach to continue my interview practice. Read the current session state, active schema, and active topic before asking the next question.
 ```
 
-For the SQL/SQLite setup, open [SQL Practice Setup](.agents/skills/data-science-sprint-coach/question-bank/sql/SETUP.md). For the Python/pandas setup, open [Python and pandas Practice Setup](.agents/skills/data-science-sprint-coach/question-bank/python/SETUP.md).
-
-For complete public practice material, open the [30-Day Question Bank](.agents/skills/data-science-sprint-coach/question-bank/sprint-30-day-question-bank.md) and the [CSV + SQLite Data Bank](resources/data/README.md). They are full working resources, not progress records or sample results.
+Start with the [Learning Path](LEARNING_PATH.md), then open one folder in the [Topic Resource Library](resources/library/). SQL and Python/pandas each include their own setup instructions; every topic keeps its environment metadata and questions together.
 
 ## What it covers
 
@@ -27,7 +25,7 @@ For complete public practice material, open the [30-Day Question Bank](.agents/s
 - case interviews
 - technical communication
 
-Every topic has one public `questions.md` catalog. It never shows what an individual has covered, will cover next, or scored.
+Every topic folder contains only `ENVIRONMENT.md` and `QUESTIONS.md`. It never shows what an individual has covered, will cover next, or scored.
 
 ## Included practice resources
 
@@ -54,17 +52,16 @@ This coach is independent. It may receive only an interview surface, readiness g
 ## Repository map
 
 ```text
-.agents/skills/data-science-sprint-coach/
-├── SKILL.md
-├── agents/openai.yaml
-└── question-bank/
-    ├── schema-registry.md
-    └── {sql,python,ml,statistics,llm,design,case,communication,other}/
-        └── questions.md
+resources/
+├── library/
+│   └── {sql,python,ml,statistics,llm,design,case,communication,other}/
+│       ├── ENVIRONMENT.md
+│       └── QUESTIONS.md
+└── data/
 
 private-progress/  # local only; excluded from Git
 
 tests/training-continuity.md
 ```
 
-Read [the skill instructions](.agents/skills/data-science-sprint-coach/SKILL.md), [the question bank](.agents/skills/data-science-sprint-coach/question-bank/), and [the continuity test](tests/training-continuity.md).
+Read [the learning path](LEARNING_PATH.md), [the Topic Resource Library](resources/library/), and [the continuity test](tests/training-continuity.md).

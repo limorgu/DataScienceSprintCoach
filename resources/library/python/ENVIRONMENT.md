@@ -14,4 +14,6 @@ python -m pip install pandas
 
 4. Use the public CSV tables in `resources/data/` or connect to one of the matching SQLite databases. Keep joins inside the selected dataset and validate merge grain.
 
-For the topic prompts, use [questions.md](questions.md) and the complete [30-day Python and pandas bank](../sprint-30-day-question-bank.md#python-and-pandas).
+**Coverage:** core Python, lists, strings, dictionaries, algorithms, pandas, joins, validation, reshaping, cohorts, rolling metrics, and data quality.
+
+Use [QUESTIONS.md](QUESTIONS.md) for the Python and pandas questions.

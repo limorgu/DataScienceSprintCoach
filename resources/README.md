@@ -1,6 +1,6 @@
 # Practice Resources
 
-> For the VS Code and SQLite workflow, start with [SQL Practice Setup](../.agents/skills/data-science-sprint-coach/question-bank/sql/SETUP.md).
+> Start with the [Topic Resource Library](library/), then open SQL for the VS Code and SQLite setup.
 
 ## Complete synthetic data bank
 

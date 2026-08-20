@@ -1,10 +1,6 @@
-# Public Question Catalog
+# Library routing
 
-> Start with the repository [environment guide](../../../../ENVIRONMENT.md) for the VS Code, Codex, and SQLite workflow.
-
-This folder is owned by the Data Science Sprint Coach. It is a public catalog of reusable questions, organized only by topic.
-
-For the complete source-derived four-week bank, use [sprint-30-day-question-bank.md](sprint-30-day-question-bank.md). The topic catalogs below remain the entry points for focused practice.
+Public topic resources live in the repository [Topic Resource Library](../../../../resources/library/). Use [LEARNING_PATH.md](../../../../LEARNING_PATH.md) to choose a topic. Do not maintain a mixed question list here.
 
 ## Topics
 

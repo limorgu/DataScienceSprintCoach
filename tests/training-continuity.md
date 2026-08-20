@@ -1,6 +1,6 @@
 # Data Science Sprint Coach — Fresh-Context Validation
 
-Run each case in a fresh context with only this skill, relevant question-bank files, and a fictional request. Do not expose the expected answer to the agent.
+Run each case in a fresh context with only this skill, the relevant Topic Resource Library files, and a fictional request. Do not expose the expected answer to the agent.
 
 ## 1. Durable continuation
 
@@ -52,7 +52,7 @@ Pass only if state is repaired to last Q49 / next Q50 and Q49 remains `prompt_re
 
 Ask for Python, ML, LLM, design, or case practice after SQL practice exists.
 
-Pass only if the agent reads the requested topic's public `questions.md` catalog, keeps all individual history private, and does not expose whether a question was covered.
+Pass only if the agent reads the requested topic's public `QUESTIONS.md` catalog, keeps all individual history private, and does not expose whether a question was covered.
 
 ## 9. Public/private practice boundary
 

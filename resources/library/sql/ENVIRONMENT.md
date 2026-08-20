@@ -20,4 +20,6 @@ SELECT * FROM tickets LIMIT 5;
 
 Each dataset folder provides the same tables as CSV files and a `schema.sql` file. Use only tables in the selected database; never combine schemas or borrow tables from a different dataset.
 
-For the topic prompts, use [questions.md](questions.md) and the complete [30-day SQL bank](../sprint-30-day-question-bank.md#sql).
+**Coverage:** aggregation, CTEs, joins, NULL handling, windows, ranking, LAG/LEAD, rolling metrics, data quality, funnels, and experiment metrics.
+
+Use [QUESTIONS.md](QUESTIONS.md) for the 100 SQL questions.
