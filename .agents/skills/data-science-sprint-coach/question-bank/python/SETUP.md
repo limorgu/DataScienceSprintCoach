@@ -12,4 +12,6 @@ source .venv/bin/activate
 python -m pip install pandas
 ```
 
-4. Use the public CSV tables in `resources/sql/` for pandas exercises. Keep joins within the active dataset and validate merge grain.
+4. Use the public CSV tables in `resources/data/` or connect to one of the matching SQLite databases. Keep joins inside the selected dataset and validate merge grain.
+
+For the topic prompts, use [questions.md](questions.md) and the complete [30-day Python and pandas bank](../sprint-30-day-question-bank.md#python-and-pandas).

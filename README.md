@@ -14,6 +14,8 @@ Use @data-science-sprint-coach to continue my interview practice. Read the curre
 
 For the SQL/SQLite setup, open [SQL Practice Setup](.agents/skills/data-science-sprint-coach/question-bank/sql/SETUP.md). For the Python/pandas setup, open [Python and pandas Practice Setup](.agents/skills/data-science-sprint-coach/question-bank/python/SETUP.md).
 
+For complete public practice material, open the [30-Day Question Bank](.agents/skills/data-science-sprint-coach/question-bank/sprint-30-day-question-bank.md) and the [CSV + SQLite Data Bank](resources/data/README.md). They are full working resources, not progress records or sample results.
+
 ## What it covers
 
 - SQL

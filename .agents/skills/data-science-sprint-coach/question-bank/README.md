@@ -4,6 +4,8 @@
 
 This folder is owned by the Data Science Sprint Coach. It is a public catalog of reusable questions, organized only by topic.
 
+For the complete source-derived four-week bank, use [sprint-30-day-question-bank.md](sprint-30-day-question-bank.md). The topic catalogs below remain the entry points for focused practice.
+
 ## Topics
 
 - `sql/`
