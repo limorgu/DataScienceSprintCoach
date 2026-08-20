@@ -43,3 +43,29 @@ Use these prompts as a topic catalog. This file intentionally does not show a le
 - Count channel switches per user.
 - Show running session number per user.
 - Calculate monthly cumulative activated users.
+
+## Query construction and data quality
+
+- Explain the difference between `WHERE`, `HAVING`, and `QUALIFY` using a cohort metric.
+- Find duplicate session identifiers and choose a safe deduplication rule.
+- Compare `COUNT(*)`, `COUNT(column)`, and `COUNT(DISTINCT column)` on a LEFT JOIN.
+- Write a safe conditional rate that avoids integer division and zero denominators.
+- Show users whose session timestamps precede signup and quantify the anomaly.
+- Standardize channels with `CASE` before calculating a metric.
+- Use `COALESCE` without accidentally converting a missing fact into a real value.
+- Build a reusable date spine for a monthly report with missing months retained.
+- Explain CTE versus subquery trade-offs for readability and debugging.
+- Diagnose an inflated count caused by a many-to-many join.
+
+## Advanced windows and business metrics
+
+- Calculate each user's time between consecutive sessions.
+- Return each user's first and last session with one row per user.
+- Calculate seven-day retention by signup cohort.
+- Calculate weekly active users and week-over-week change.
+- Identify reactivated users after a 30-day inactivity gap.
+- Build a funnel from signup to first session to completed session.
+- Rank plans by activation rate with a minimum denominator.
+- Calculate percentile-based session activity within country.
+- Compare a user's session count to the average for their plan type.
+- Use a recursive CTE or date spine to fill missing reporting periods.

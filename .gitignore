@@ -1,2 +1,7 @@
 # All personal outcomes and daily records remain local and private.
 private-progress/
+
+# Local build and inspection artifacts.
+work/
+outputs/
+resources/sql/*.inspect.ndjson
