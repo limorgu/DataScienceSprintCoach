@@ -1,6 +1,6 @@
 # Topic Resource Library
 
-Open [LEARNING_PATH.md](../../LEARNING_PATH.md) and then choose one topic folder. Each topic contains exactly:
+Choose one topic folder below. Each topic contains exactly:
 
 - `ENVIRONMENT.md` — tools, data type (SQLite/CSV/DataFrame or conceptual), approved public resources, and covered competencies.
 - `QUESTIONS.md` — topic-specific public questions only.
