@@ -12,6 +12,8 @@ Open this repository in Codex and say:
 Use @data-science-sprint-coach to continue my interview practice. Read the current session state, active schema, and active topic before asking the next question.
 ```
 
+Start with the [Topic Resource Library](resources/library/) to open the Python, ML, LLM, design, case, statistics, SQL, and other question libraries. Each topic keeps its questions and environment notes together.
+
 For VS Code, SQLite, CSV resources, and the 9pm private progress workflow, read [ENVIRONMENT.md](ENVIRONMENT.md).
 
 ## What it covers
