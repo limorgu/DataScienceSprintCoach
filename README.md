@@ -39,7 +39,6 @@ The repository includes a public synthetic [SQL practice kit](resources/sql/READ
 4. Review the attempt, identify the key correction, and offer a retry when useful.
 5. At 9pm, the dedicated progress agent saves the day's result, next question, and progression signal to private progress.
 
-At the end of every practice week, the coach runs a short representative interview-style assessment. Its private gap review updates the following week: major gaps receive extra practice days; stable transfer performance moves the learner to the next roadmap topic.
 
 Question numbering never resets during a continued sequence. The coach never borrows a table or column from a historical schema: it uses only the active schema.
 
