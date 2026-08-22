@@ -52,8 +52,6 @@ The catalogs are public resources only. They do not state what you have complete
 
 Keep actual answers, covered questions, scores, next question, sprint plan, and daily notes in local `private-progress/`. It is gitignored.
 
-At the end of each seven-day practice week, run a private 3–5 question representative interview checkpoint. Record its outcomes and gap analysis in `private-progress/`, then adjust the next week's plan: give major gaps additional practice days; otherwise continue reinforcement or move to the next roadmap topic when transfer performance is stable.
-
 At **9pm**, the dedicated progress agent updates:
 
 - `private-progress/sprint-session-state.yaml`;
