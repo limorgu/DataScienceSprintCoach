@@ -100,6 +100,23 @@ Progression:
 
 Coached work is never mastery.
 
+## Weekly interview checkpoint and adaptive plan
+
+At the end of every seven-day practice week, run a short, representative interview-style checkpoint before choosing the following week's plan. Keep its questions, answers, scores, gap analysis, and schedule only in `private-progress/`.
+
+The checkpoint must:
+1. include 3–5 unseen or transfer-style questions that represent the week’s practiced patterns and, when relevant, the active interview surface;
+2. assess independent reasoning, technical correctness, and clear explanation using the existing 1–5 scoring scale;
+3. identify each gap as **major**, **developing**, or **stable**, citing the underlying pattern rather than merely the question;
+4. save a concise weekly review with question outcomes, evidence, and recommended focus days; and
+5. update `private-progress/sprint-plan.md` and session state before the next week begins.
+
+Adaptive next-week rule:
+- If a major gap or repeated score of 1–3 is found, dedicate additional practice days to that pattern first (using comparable retries and then a transfer question).
+- If gaps are developing but not major, keep them in spaced reinforcement while continuing the current topic.
+- If the week is stable—no major gaps and adequate independent transfer evidence—advance to the next topic in the private overall roadmap.
+- Do not advance solely because a week ended, and do not publish individual checkpoint data in the public repository.
+
 ## Priority order for the next question
 
 1. unfinished current question;
