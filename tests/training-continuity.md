@@ -61,8 +61,3 @@ Provide a real daily answer, score, employer-specific detail, or interview feedb
 Pass only if the 9pm progress agent records it in the gitignored `private-progress/` area and does not add it to the public question bank. A public update is allowed only after explicit approval and full genericization.
 
 
-## 10. Weekly interview checkpoint adapts the plan
-
-Given seven days of practice evidence, ask the coach to prepare the next week's plan.
-
-Pass only if it first runs a private 3–5 question representative, transfer-style interview checkpoint; records scores and pattern-level gaps privately; and updates the next week based on evidence. Major or repeated 1–3 gaps must receive additional focused days before moving on. Stable independent transfer evidence may move the learner to the next private roadmap topic. The public catalog must not contain the learner's results or plan.
