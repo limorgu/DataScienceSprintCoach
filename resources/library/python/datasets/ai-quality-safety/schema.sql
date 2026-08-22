@@ -1,0 +1,13 @@
+CREATE TABLE users (user_id INTEGER, signup_date TEXT, plan_type TEXT, language TEXT, country TEXT, age_group TEXT);
+CREATE TABLE sessions (session_id INTEGER, user_id INTEGER, session_start TEXT, channel TEXT, topic TEXT, end_status TEXT);
+CREATE TABLE model_responses (response_id INTEGER, session_id INTEGER, turn_number INTEGER, model_version TEXT, created_at TEXT, latency_ms INTEGER, is_safe INTEGER, predicted_helpfulness REAL, language TEXT, cost_usd REAL);
+CREATE TABLE evaluation_labels (label_id INTEGER, response_id INTEGER, actual_harmful INTEGER, predicted_harmful INTEGER, severity TEXT, error_type TEXT, rubric_version TEXT, reviewer_count INTEGER, confidence REAL);
+CREATE TABLE incidents (incident_id INTEGER, detected_at TEXT, model_version TEXT, incident_type TEXT, severity TEXT, affected_users INTEGER, detection_source TEXT, time_to_mitigate_min INTEGER, root_cause TEXT);
+CREATE TABLE experiment_assignments (assignment_id INTEGER, user_id INTEGER, experiment_id TEXT, variant TEXT, assigned_at TEXT, segment TEXT, cluster_id INTEGER);
+CREATE TABLE experiment_outcomes (assignment_id INTEGER, completed INTEGER, quality_score REAL, safety_violation INTEGER, latency_ms INTEGER, cost_usd REAL);
+CREATE TABLE sampling_frame (case_id INTEGER, industry TEXT, region TEXT, risk_tier TEXT, stream_hour INTEGER, selected_for_label INTEGER, selection_probability REAL, label_cost_usd REAL);
+CREATE TABLE labeling_jobs (job_id INTEGER, case_id INTEGER, reviewer_id INTEGER, label TEXT, review_seconds INTEGER, rubric_version TEXT, adjudicated INTEGER);
+CREATE TABLE queries (query_id INTEGER, language TEXT, query_type TEXT, gold_doc_id INTEGER, difficulty TEXT, created_at TEXT);
+CREATE TABLE retrieval_results (query_id INTEGER, document_id INTEGER, rank INTEGER, retrieval_score REAL, is_relevant INTEGER, retriever_version TEXT);
+CREATE TABLE generated_answers (answer_id INTEGER, query_id INTEGER, model_version TEXT, faithful INTEGER, answer_quality REAL, abstained INTEGER, citation_count INTEGER, latency_ms INTEGER, cost_usd REAL);
+CREATE TABLE reviewer_labels (review_id INTEGER, answer_id INTEGER, reviewer_id INTEGER, quality_label TEXT, safety_label TEXT, confidence REAL, rubric_version TEXT);
