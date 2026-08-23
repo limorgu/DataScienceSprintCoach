@@ -50,7 +50,7 @@ The catalogs are public resources only. They do not state what you have complete
 
 ## Private continuity and 9pm record
 
-Keep actual answers, covered questions, scores, next question, sprint plan, and daily notes in local `private-progress/`. It is gitignored.
+Keep actual answers, covered questions, scores, next question, sprint plan, and daily notes in your own local `private-progress/`. It is gitignored. A different learner's installation keeps a separate local folder; do not copy, commit, or share progress between learners.
 
 At **9pm**, the dedicated progress agent updates:
 
