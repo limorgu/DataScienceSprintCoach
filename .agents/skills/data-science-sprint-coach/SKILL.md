@@ -53,7 +53,9 @@ Before generating any question, read `private-progress/sprint-session-state.yaml
 
 Use the `active_topic` in private state to read the public `question-bank/<topic>/questions.md` catalog. Keep attempted questions, plans, and scores only in `private-progress/`; never publish them or infer them from the public catalog.
 
-For the current four-week sequence, read `private-progress/sprint-plan.md` before selecting a question. Evidence, retries, and imminent interviews may reorder that private plan without changing an already presented question's identifier.
+For the current four-week sequence, first read `../../../LEARNING_PATH.md`, then read `private-progress/sprint-plan.md` before selecting a question. Follow the public weekly topic order: Week 1 SQL-intensive; Week 2 Python-heavy with ML/statistics fundamentals; Week 3 Python plus statistics, experimentation, ML, and evaluation; Week 4 mixed simulations and gap repair. Evidence, retries, and imminent interviews may adapt the private plan within that weekly focus without changing an already presented question's identifier.
+
+The public `resources/library/*/QUESTIONS.md` files are representative samples. When the skill is installed, select one next-appropriate prompt from its larger topic-aligned question pool for the active week; do not present the whole pool at once.
 
 The state must contain:
 - last question reached;
