@@ -48,6 +48,8 @@ Question numbering never resets during a continued sequence. The coach never bor
 
 The tracked question bank contains only topic-organized reusable questions and synthetic schemas. Real daily answers, scores, interview feedback, employer details, coverage status, and private links belong in the local gitignored `private-progress/` folder.
 
+Every learner keeps a separate local `private-progress/` folder. The skill may provide continuity for that learner, but it never ships, publishes, or reuses another learner's progress.
+
 ## Connection to JobSearchCoach
 
 This coach is independent. It may receive only an interview surface, readiness gap, available time, or approved practice schema from [JobSearchCoach](https://github.com/limorgu/JobSearchCoach). It returns only a compact readiness signal and never searches for jobs, edits resumes, applies, or manages networking.
