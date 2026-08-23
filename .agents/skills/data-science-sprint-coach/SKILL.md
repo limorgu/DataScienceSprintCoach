@@ -121,7 +121,9 @@ Continuity beats novelty.
 
 ## Private progress and 9pm agent
 
-All individual progress belongs in `private-progress/`, including daily coverage, answers, scores, retry status, next question, session state, and sprint plan. It is gitignored and never published.
+All individual progress belongs in each learner's own local `private-progress/`, including daily coverage, answers, scores, retry status, next question, session state, and sprint plan. It is gitignored and never published.
+
+A new installation may enable local continuity for its own learner, but it must start with that learner's local records only. Never bundle, copy, expose, or reuse another learner's private-progress data.
 
 At 9pm, the dedicated progress agent records the day's practice evidence, updates the private session state and plan, and writes a concise daily progress log. It must not update the public question catalog with a learner's results.
 
